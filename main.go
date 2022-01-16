@@ -8,12 +8,6 @@ import (
 
 func main() {
 
-	//SetENV
-	// ENV()
-
-	//Database
-	// utils.ConnectToMongoDB()
-
 	//Gin Server
 	server := routes.SetupRouter()
 	err := server.Run()

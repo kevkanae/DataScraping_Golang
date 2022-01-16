@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	"fmt"
 	"lead/services"
 
 	"github.com/gin-gonic/gin"
@@ -19,7 +18,7 @@ func Code(c *gin.Context) {
 			moves = v.Move
 		}
 	}
-	fmt.Println(paramCode)
+
 	c.HTML(200, "Code.html", gin.H{
 		"title": title,
 		"moves": moves,

@@ -11,7 +11,6 @@ func Index(c *gin.Context) {
 	data := services.ScrapeURL()
 
 	//Display Scraped Data
-	// c.PureJSON(200, data)
 	c.HTML(200, "Display.html", gin.H{
 		"Array": data,
 	})
