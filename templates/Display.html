@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    table {
+    border-collapse: separate;
+    text-indent: initial;
+    white-space: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: medium;
+    font-style: normal;
+    color: -internal-quirk-inherit;
+    text-align: start;
+    border-spacing: 2px;
+    font-variant: normal;
+  }
+  tbody {
+      display: table-row-group;
+      vertical-align: middle;
+      border-color: inherit;
+  }
+  tr {
+      display: table-row;
+      vertical-align: inherit;
+      border-color: inherit;
+  }
+  td {
+      display: table-cell;
+      vertical-align: inherit;
+  }
+  </style>
+  <body>
+    <!-- {{range .Array}}
+    <div>
+      <h4>Title: {{ .Title}}</h4>
+      <p>{{ .Move}}</p>
+    </div>
+    {{end}} -->
+    <table border="0" cellpadding="2" cellspacing="0">
+      <tbody>
+      {{range .Array}}
+        <tr bgcolor="#FFEECC">
+          <td valign="TOP">
+            <font face="arial,helvetica">{{ .Code}}</font>
+          </td>
+          <td>
+            <font face="arial,helvetica">
+              <b>{{ .Title}}</b>
+              <br>
+              <font size="-1">{{ .Move}}</font>
+            </font>
+          </td>
+        </tr>
+    {{end}}
+      </tbody>
+  </body>
+</html>
